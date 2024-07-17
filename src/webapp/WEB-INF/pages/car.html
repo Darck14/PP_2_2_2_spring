@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Car</title>
+</head>
+<body>
+
+<div th:each="car : ${car}">
+    <a th:text="${car.getBrand()}">brand</a>
+    <a th:text="${car.getModel()}">model</a>
+    <a th:text="${car.getYear()}"></a>
+</div>
+
+</body>
+</html>
