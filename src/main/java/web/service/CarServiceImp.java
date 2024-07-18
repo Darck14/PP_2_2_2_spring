@@ -23,14 +23,6 @@ public class CarServiceImp implements CarService {
 
     @Override
     public List<Car> show(Integer num) {
-
-        List<Car> result = new ArrayList<>();
-
-        if (num >= 5 | num == -1) {
-            return cars;
-        }
-        else result = cars.stream().limit( (long) num).toList();
-
-        return result;
+        return cars.stream().limit( (long) num).toList();
     }
 }
