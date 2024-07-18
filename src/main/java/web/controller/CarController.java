@@ -20,7 +20,7 @@ public class CarController {
     }
 
     @GetMapping()
-    public String getList(@RequestParam(value = "count", defaultValue = "0") Integer num, Model model) {
+    public String getList(@RequestParam(value = "count", defaultValue = "-1") Integer num, Model model) {
         model.addAttribute("car", carServiceImp.show(num));
         return "car";
     }

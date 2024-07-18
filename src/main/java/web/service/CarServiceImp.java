@@ -26,14 +26,10 @@ public class CarServiceImp implements CarService {
 
         List<Car> result = new ArrayList<>();
 
-        if (num >= 5 | num == 0) {
+        if (num >= 5 | num == -1) {
             return cars;
         }
-        else {
-            for (int i = 0; i < num; i++) {
-                result.add(cars.get(i));
-            }
-        }
+        else result = cars.stream().limit( (long) num).toList();
 
         return result;
     }
