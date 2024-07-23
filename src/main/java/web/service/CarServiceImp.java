@@ -23,6 +23,6 @@ public class CarServiceImp implements CarService {
 
     @Override
     public List<Car> show(Integer num) {
-        return cars.stream().limit( (long) num).toList();
+        return cars.stream().limit(num).toList();
     }
 }
